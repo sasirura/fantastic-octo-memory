@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
+import { LocationModule } from './location/location.module';
 
 import { MongooseModule } from '@nestjs/mongoose';
 
@@ -10,6 +11,7 @@ import { MongooseModule } from '@nestjs/mongoose';
   providers: [AppService],
   imports: [
     UserModule,
+    LocationModule,
     MongooseModule.forRoot(
       'mongodb+srv://sasiru:CdlPF7dJig2cZSNv@medicare.x2up3ox.mongodb.net/location-device-management?retryWrites=true&w=majority',
     ),
