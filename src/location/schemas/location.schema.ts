@@ -11,7 +11,7 @@ export class Location {
   @Prop({ required: true })
   address: string;
 
-  @Prop({ required: true, unique: true })
+  @Prop({ required: true })
   devices: string;
 
   @Prop({ required: true })
